@@ -1,0 +1,141 @@
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git log
+commit ad2240e4bbae573f93d7858d3a447c98908564b6 (HEAD -> master)
+Author: franklynmarty0220 <64612023+franklynmarty0220@users.noreply.github.com>
+Date:   Mon Sep 27 13:04:30 2021 -0400
+
+    adding fourth.txt
+
+commit 1f6808fe1b4059b734dd629021114565cdb1bb8a
+Author: franklynmarty0220 <64612023+franklynmarty0220@users.noreply.github.com>
+Date:   Mon Sep 27 13:02:40 2021 -0400
+
+    adding third.txt
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git commit-m "removing third.txt"
+git: 'commit-m' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit-tree
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git commit -m "remiving third.txt"
+[master 6183448] remiving third.txt
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ delete mode 100644 Documents/learn_git_again/third.txt
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git log
+commit 6183448f6459c1f4de5d0f36f60b649540c441f7 (HEAD -> master)
+Author: franklynmarty0220 <64612023+franklynmarty0220@users.noreply.github.com>
+Date:   Mon Sep 27 13:35:11 2021 -0400
+
+    remiving third.txt
+
+commit ad2240e4bbae573f93d7858d3a447c98908564b6
+Author: franklynmarty0220 <64612023+franklynmarty0220@users.noreply.github.com>
+Date:   Mon Sep 27 13:04:30 2021 -0400
+
+    adding fourth.txt
+
+commit 1f6808fe1b4059b734dd629021114565cdb1bb8a
+Author: franklynmarty0220 <64612023+franklynmarty0220@users.noreply.github.com>
+Date:   Mon Sep 27 13:02:40 2021 -0400
+
+    adding third.txt
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git config --global core.pager 'cat'
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git config-- global
+git: 'config--' is not a git command. See 'git --help'.
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git config --global
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git config --get-all
+error: wrong number of arguments, should be from 1 to 2
+usage: git config [<options>]
+
+Config file location
+    --global              use global config file
+    --system              use system config file
+    --local               use repository config file
+    --worktree            use per-worktree config file
+    -f, --file <file>     use given config file
+    --blob <blob-id>      read config from given blob object
+
+Action
+    --get                 get value: name [value-pattern]
+    --get-all             get all values: key [value-pattern]
+    --get-regexp          get values for regexp: name-regex [value-pattern]
+    --get-urlmatch        get value specific for the URL: section[.var] URL
+    --replace-all         replace all matching variables: name value [value-pattern]
+    --add                 add a new variable: name value
+    --unset               remove a variable: name [value-pattern]
+    --unset-all           remove all matches: name [value-pattern]
+    --rename-section      rename section: old-name new-name
+    --remove-section      remove a section: name
+    -l, --list            list all
+    --fixed-value         use string equality when comparing values to 'value-pattern'
+    -e, --edit            open an editor
+    --get-color           find the color configured: slot [default]
+    --get-colorbool       find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --type <>         value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --null            terminate values with NUL byte
+    --name-only           show variable names only
+    --includes            respect include directives on lookup
+    --show-origin         show origin of config (file, standard input, blob, command line)
+    --show-scope          show scope of config (worktree, local, global, system, command)
+    --default <value>     with --get, use default value when missing entry
+
+(base) Franklyns-MacBook-Pro-2:learn_git_again franklynmarty$ git config --global -l
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+user.name=franklynmarty0220
+user.email=64612023+franklynmarty0220@users.noreply.github.com
+core.pager=cat
